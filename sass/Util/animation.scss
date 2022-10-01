@@ -1,0 +1,312 @@
+@import "../Util/_variables.scss";
+
+/*Loader Spinner background*/
+
+@keyframes loader_background {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes loader_background {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+/*Rotation_loader*/
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Bouton explorer et Search*/
+
+.button_explore:hover {
+  opacity: 0.8;
+}
+.search_button:hover {
+  opacity: 0.8;
+}
+
+/*Filtres Accueil*/
+
+label :hover {
+  background-color: $color_background_filtres;
+}
+label :active {
+  background-color: $color_background_filtres;
+}
+
+/*Apparition Carte Menu*/
+
+@keyframes apparition_carte_menu {
+  0% {
+    transform: translateY(-70px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.cadre_proposition__h2 > :nth-of-type(2) {
+  animation: apparition_carte_menu 0.4s ease-in-out;
+}
+
+.cadre_proposition > :nth-of-type(5) {
+  animation: apparition_carte_menu 1.6s ease-in-out;
+}
+
+/*Menu Validé*/
+
+a.cadre_proposition.button_checked:hover {
+  margin-right: 0;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transform: translateX(65px);
+}
+
+.button_valide:hover {
+  animation: menu_valide 0.5s both;
+}
+
+.button_checked {
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+/*Rotation icone*/
+
+a.cadre_proposition .button_checked:hover i.menuItem__icon {
+  display: contents;
+}
+.button_checked:hover > i {
+  transform: rotate(360deg);
+  animation: rotate_icone 0.5s;
+  transition: all 400ms ease-in-out 0ms;
+}
+
+@-webkit-keyframes rotate_icone {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate_icone {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*Menu validé*/
+@-webkit-keyframes menu_valide {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-125x);
+  }
+}
+@keyframes menu_valide {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-125px);
+  }
+}
+/* Prix décalé*/
+@-webkit-keyframes prix_decale {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-70px);
+    transform: translateX(-70px);
+  }
+}
+@keyframes prix_decale {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-70px);
+    transform: translateX(-70px);
+  }
+}
+/* Texte_rogne*/
+@-webkit-keyframes texte_rogne {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    width: 100%;
+  }
+  100% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    width: 50%;
+  }
+}
+@keyframes texte_rogne {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+  }
+}
+.cadre_proposition:hover .titre_menu_h3 {
+  width: 50%;
+}
+.cadre_proposition:hover .texte_menu_p {
+  width: 50%;
+}
+
+/*Menu_valide*/
+.menu_valide:hover {
+  -webkit-animation: menu_valide 0.5s both;
+  animation: menu_valide 0.5s both;
+}
+.entrees.cadre_proposition.button_checked:checked {
+  -webkit-animation: menu_valide 0.5s;
+  animation: menu_valide 0.5s;
+}
+
+.button_checked:hover {
+  animation: menu_valide 0.5s;
+  -webkit-animation: menu_valide 0.5s;
+  animation: menu_valide 0.5s;
+}
+
+.cadre_prix {
+  animation: menu_valide 0.5s;
+  -webkit-animation: menu_valide 0.5s;
+  animation: menu_valide 0.5s;
+}
+.desserts:hover .button_checked {
+  margin-right: 0;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+.desserts:hover i {
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+.button_checked > i {
+  color: #99e2d0;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: white;
+  transition-duration: 0.5s;
+}
+.cadre_proposition > * {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+input:checked ~ .desserts .icone {
+  margin-right: 0;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+input:checked ~ .container i {
+  margin-right: 0;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transform: rotate_icone(360deg);
+}
+.cadre_proposition:hover .button_checked {
+  animation: menu_valide 1s;
+}
+.cadre_proposition:hover .prix {
+  animation: prix_decale 1s;
+}
+.cadre_proposition:hover.button_checked {
+  animation: menu_valide 1s;
+}
+.cadre_proposition:hover.prix {
+  animation: prix_decale 1s;
+}
+
+/* Texte menu*/
+.texte_menu_p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/*Coeur*/
+
+i.fas.fa-heart.icone_heart:hover {
+  padding: 1px 0px 0px 0px;
+  font-size: 1.5em;
+  background: linear-gradient(
+    90deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(255, 121, 222, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  position: absolute;
+  right: 25px;
+  top: 30px;
+  right: 0px;
+  top: 3px;
+}
+i.fas.fa-heart.icone_heart_accueil:hover {
+  padding: 0px 0px 0px 0px;
+  font-size: 1.5em;
+  background: linear-gradient(
+    90deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(255, 121, 222, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  position: absolute;
+  right: 45px;
+  top: 175px;
+}

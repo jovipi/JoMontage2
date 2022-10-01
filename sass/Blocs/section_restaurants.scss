@@ -1,0 +1,166 @@
+.titre_bloc h2 {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 30px 0px 20px 20px;
+  width: 100%;
+}
+/*------cadre restaurants-----------*/
+.bloc_photo {
+  position: relative;
+  background: white;
+  height: 230px;
+  border-radius: 20px;
+  margin: 10px;
+  box-shadow: 2px 2px 7px #d3d3d3;
+  width: 100%;
+}
+.bloc_pour_coeur {
+  display: block;
+  border-radius: 35px;
+  box-shadow: 0px 0px 0px grey;
+  width: 100%;
+  position: relative;
+}
+.etablissement {
+  display: block;
+  border-radius: 35px;
+  box-shadow: 0px 0px 0px grey;
+  width: 100%;
+}
+
+.cadre_etablissement {
+  display: block;
+  width: 100%;
+  height: 230px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px grey;
+  background-color: $white;
+}
+.cadre_etablissement img {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+#section_restaurants {
+  @include flex_space_between;
+  margin-bottom: 15px;
+  font-size: 20px;
+  height: 100%;
+  margin: 20px 30px 0px 5px;
+}
+
+.texte_p {
+  @include flex_column_flex-start;
+  padding: 0px 0px 0px 10px;
+  color: $black;
+  font-size: 0.8em;
+}
+.titre_h3 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-weight: bold;
+  color: black;
+  font-size: 0.9em;
+  padding: 15px 0px 0px 10px;
+}
+.nouveau {
+  @include nouveau;
+}
+
+i.far.fa-heart.icone_heart_accueil {
+  opacity: 0.5;
+  right: 25px;
+  bottom: 25px;
+  padding: 0px 20px 0px 20px;
+  font-size: 1.5em;
+  position: absolute;
+}
+
+i.fas.fa-heart.icone_heart_accueil {
+  padding: 1px 0px 0px 0px;
+  font-size: 1.5em;
+  background: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  position: absolute;
+  right: 45px;
+  top: 175px;
+}
+/*----------------------------------------------------------------------------------------------------
+                                      Medias Queries
+------------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 540px) and (max-width: 735px) {
+  #section_restaurants {
+    @include media_queries_mini_ipad;
+    padding: 0px;
+    margin: 20px 10px 0px 30px;
+  }
+  .bloc_photo {
+    position: relative;
+    background: white;
+    height: 230px;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 2px 2px 7px #d3d3d3;
+    width: 45%;
+  }
+  .titre_bloc {
+    padding: 30px 0px 0px 20px;
+    width: 100%;
+  }
+
+  .titre_bloc h2 {
+    font-size: 1.1em;
+  }
+}
+
+/*Pour tous types de tablettes*/
+@media all and (min-width: 736px) and (max-width: 990px) {
+  #section_restaurants {
+    @include media_queries_mini_ipad;
+    padding: 0px;
+    margin: 20px 10px 0px 30px;
+  }
+  .bloc_photo {
+    position: relative;
+    background: white;
+    height: 230px;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 2px 2px 7px #d3d3d3;
+    width: 45%;
+  }
+  .titre_bloc {
+    padding: 30px 0px 0px 20px;
+    width: 100%;
+  }
+  .titre_bloc h2 {
+    font-size: 1.3em;
+    padding: 30px 0px 0px 40px;
+  }
+}
+/* Version Desktop*/
+@media all and (min-width: 991px) {
+  #section_restaurants {
+    @include desktop_restaurant;
+  }
+  .bloc_photo {
+    width: 35%;
+  }
+  .titre_bloc h2 {
+    padding: 40px 10px 0px 30px;
+    margin: 30px;
+  }
+  .titre_bloc {
+    padding: 30px 0px 0px 20px;
+    width: 100%;
+  }
+}

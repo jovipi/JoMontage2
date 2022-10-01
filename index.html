@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Pour s'adapter au smartphone-->
+    <title>Accueil</title>
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/15359b2697.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader_rotate "></div>
+    </div>
+        <header class="header">
+                    <div class="header_main">
+                        <!--Logo-->
+                            <a href="">
+                                <img class="logo_header" src="images/logo/ohmyfood.png" alt="logo site">
+                            </a>
+                    </div>
+            <div class="container">
+                <form class="formulaire_boutons" method="POST" action="traitement.php">
+                    <!--Zone de Recherche-->
+                    <div class="position_button">
+                    <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                    <input type="search" name="search_city" id="search" placeholder="Paris, Belleville" autofocus required />
+                    </div>
+                </form>
+               
+            <!--Le corps de Header-->
+                    <div class="title_main">
+                <!--l'entête du corps-->
+                        <h1 class="titre_page_accueil">Réservez le menu qui vous convient</h1>
+                            <p class="sous_titre">Découvrez les restaurants d'exceptions, sélectionnés par nos soins</p>
+                    </div>
+            
+                    <!--Filtres-->
+                    <div class="filtres_bloc">
+                    <!--Bouton Economique-->
+                        <label>
+                            <span class="button_explore">Explorer nos restaurants</span>
+                        </label>
+                        <input type="search" hidden name="button_filtre" id="explorer" />         
+                    </div>
+            </div> 
+        </header>
+        <section id="section_fonctionnement">
+            <!--Titre Bloc-->
+            <div class="titre_fonctionnement">
+                    <h2>Fonctionnement</h2>
+            </div>
+            <div class="bloc_filtres">
+                    <form class="button_filters" method="POST" action="traitement.php">
+                <!--Bouton Choisir Restaurants-->
+                        <label>
+                            <span class="circle-icon">1</span>
+                            <span class="checkbox_filtres"><i class="icone_filtres fas fa-mobile-alt"></i><span class="nom_filtres">Choississez votre restaurants</span></span>
+                        </label>
+                            <input type="checkbox" hidden name="button_filtre" id="choix_restos" />
+             <!--Bouton Composez votre menu-->
+                        <label>
+                            <span class="circle-icon">2</span>
+                            <span class="checkbox_filtres"><i class="icone_filtres fas fa-list-ul"></i><span class="nom_filtres">Composez votre menu</span></span>
+                        </label>
+                            <input type="checkbox" hidden name="button_filtre" id="compo_menu" />
+             <!--Bouton Dégustez au restaurant-->
+                        <label>
+                            <span class="circle-icon">3</span>
+                            <span class="checkbox_filtres"><i class="icone_filtres fas fa-store"></i><span class="nom_filtres">Dégustez au restaurant</span></span>
+                        </label>
+                            <input type="checkbox" hidden name="button_filtre" id="dégust_resto" />
+                    </form>
+            </div>
+        </section>
+        <div class="container_desktop">
+            <section id="section_restaurants">
+                <div class="titre_bloc">
+                    <!--Titre de la Section-->
+                        <h2>Restaurants</h2>
+                </div>
+                <!--Bloc Section-->
+                <div class="bloc_photo">
+                    <div class="bloc_pour_coeur">
+                        <i class="far fa-heart icone_heart_accueil"></i><i class="fas fa-heart icone_heart_accueil"></i>
+                        <a href="la_palette_du_gout.html" class="etablissement">     
+                            <span class="cadre_etablissement">
+                                <img src="images/restaurants/La_palette_du_gout.jpg" alt="la_palette_de_gout">
+                                <span class="nouveau">Nouveau</span>
+                                <span class="titre_h3">La palette de goût</span>
+                                <span class="texte_p">Ménilmontant</span>           
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="bloc_photo">
+                    <div class="bloc_pour_coeur">
+                        <i class="far fa-heart icone_heart_accueil"></i><i class="fas fa-heart icone_heart_accueil"></i>
+                        <a href="la_note_enchantee.html" class="etablissement">
+                            <span class="cadre_etablissement">
+                                <img src="images/restaurants/La_note_enchante.jpg" alt="la_note_enchante">
+                                <span class="nouveau">Nouveau</span>
+                                <span class="titre_h3">La note enchantée</span>
+                                <span class="texte_p">Charonne</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="bloc_photo">
+                    <div class="bloc_pour_coeur">
+                        <i class="far fa-heart icone_heart_accueil"></i><i class="fas fa-heart icone_heart_accueil"></i>
+                        <a href="a_la_francaise.html" class="etablissement">
+                            <span class="cadre_etablissement">
+                                <img src="images/restaurants/a_la_francaise.jpg" alt="a_la_francaise">
+                                <span class="titre_h3">A la française</span>
+                                <span class="texte_p">Cité rouge</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="bloc_photo">
+                    <div class="bloc_pour_coeur">
+                        <i class="far fa-heart icone_heart_accueil"></i><i class="fas fa-heart icone_heart_accueil"></i>
+                        <a href="le_delice_des_sens.html" class="etablissement">
+                            <span class="cadre_etablissement">
+                                <img src="images/restaurants/le_delice_des_sens.jpg" alt="le_delice_des_sens">
+                                <span class="titre_h3">Le délice des sens</span>
+                                <span class="texte_p">Folie-Méricourt</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>  
+            </section>
+        </div> 
+        <!--Footer-->
+        <footer>
+            <div class="bloc_footer">
+                <div class="logo_footer">
+                    <a href="">
+                        <img class="logo_mini_footer" src="images/logo/ohmyfood@2x.svg" alt="logo_mini_footer">
+                    </a>
+                </div>
+                <nav>
+                    <ul>
+                        <li>       
+                            <a href=""><i class="icone_blanc fas fa-utensils icone_blanc"></i> Proposer un restaurant</a>
+                        </li>
+                        <li>             
+                            <a href=""><i class="icone_blanc fas fa-hands-helping "></i>Devenir partenaire</a>
+                        </li>
+                        <li>
+                            <a href="">Mentions légales</a>
+                        </li>
+                        <li>
+                            <a href="mailto:joannapineri@gmail.com">Contact</a>
+                        </li>
+                    </ul>
+                </nav>   
+            </div>
+        </footer>
+</body>
+
+</html>

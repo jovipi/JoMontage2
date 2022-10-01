@@ -1,0 +1,362 @@
+/* -----Cadre photo restaurants--------*/
+.cadre_proposition {
+  display: flex;
+  width: 95%;
+  height: 75px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 1px 2px 10px grey;
+  margin: 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  animation: apparition_carte_menu 3s;
+}
+.titre_menu_h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#bloc_entree {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 10px;
+  border-radius: 2px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  align-content: stretch;
+}
+.bloc_titre h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+h2 {
+  font-size: 1em;
+  padding: 15px;
+  font-weight: lighter;
+}
+.green_bar::after {
+  content: "";
+  display: block;
+  margin-top: 5px;
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0;
+}
+
+.bloc_menu_entree h2 :hover {
+  border-bottom: 3px solid $color_secondary;
+}
+
+.titre_menu_h3 {
+  color: $black;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.texte_menu_p {
+  font-size: 0.73em;
+  color: $black;
+}
+.search_button {
+  @include button;
+}
+.prix {
+  font-weight: bold;
+  position: absolute;
+  top: 14px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  left: 250px;
+  top: 45px;
+  font-size: 0.85em;
+  color: $black;
+}
+
+.button_checked {
+  background-color: $color_tertiaire;
+  font-size: 54px;
+  padding: 0px 10px 0px 20px;
+  border-radius: 0px 20px 20px 0px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 65px;
+  right: -130px;
+  transform: translateX(-40px);
+  transition-duration: 0.5s;
+  transform-origin: right 50%;
+}
+.entrees {
+  overflow: hidden;
+}
+.plats {
+  overflow: hidden;
+}
+.desserts {
+  overflow: hidden;
+}
+
+.menuItem__icon {
+  padding: 5px;
+  color: #99e2d0;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  position: relative;
+  background-color: #fff;
+  font-size: 12px;
+  top: -13px;
+  left: -5px;
+}
+
+#bloc_plats {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 10px;
+  border-radius: 2px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  align-content: stretch;
+}
+#bloc_plats2 {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 10px;
+  border-radius: 2px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  align-content: stretch;
+}
+
+#bloc_dessert {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 10px;
+  border-radius: 2px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  align-content: stretch;
+}
+#bloc_dessert2 {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 10px;
+  border-radius: 2px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  align-content: stretch;
+}
+.prix {
+  left: 230px;
+}
+/*-------------------------------------------------------------------------------------------------------
+                                  Medias Queries
+---------------------------------------------------------------------------------------------------------*/
+
+/* Pour mini tablettes*/
+@media screen and (min-width: 343px) and (max-width: 730px) {
+  .prix {
+    left: 260px;
+  }
+  .cadre_proposition {
+    cursor: -webkit-zoom-out;
+    max-block-size: -webkit-fill-available;
+  }
+}
+@media screen and (min-width: 515px) and (max-width: 1440px) {
+  .entrees {
+    max-width: 300px;
+  }
+  .prix {
+    left: 220px;
+  }
+  #bloc_entree {
+    width: 50%;
+  }
+  .plats {
+    max-width: 300px;
+  }
+  #bloc_plats {
+    width: 50%;
+  }
+  #bloc_plats2 {
+    width: 50%;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    align-content: stretch;
+  }
+  #bloc_desserts {
+    width: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  #bloc_dessert2 {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    align-content: stretch;
+  }
+  .desserts {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 731px) and (max-width: 800px) {
+  .desserts {
+    max-width: 300px;
+  }
+  #bloc_menu_desserts {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1095px) {
+  .desserts {
+    max-width: 300px;
+  }
+  #bloc_menu_desserts {
+    width: 50%;
+  }
+  .commande_button {
+    width: 15%;
+  }
+  .search_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 30px 30px 30px;
+    border: 2px solid #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 50px;
+    position: relative;
+    z-index: 0;
+    height: 50px;
+    margin: 15px auto;
+    background-color: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(#9356dc),
+      to(#ff79da)
+    );
+    background: -o-linear-gradient(bottom, #9356dc, #ff79da);
+    background: linear-gradient(to top, #9356dc, #ff79da);
+    color: #fff;
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+  }
+}
+@media screen and (min-width: 1095px) and (max-width: 1950px) {
+  #bloc_entree {
+    width: 30%;
+  }
+  #bloc_plats {
+    width: 30%;
+  }
+  #bloc_plats2 {
+    width: 30%;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    align-content: stretch;
+  }
+  .bloc_menu_plats {
+    width: 100%;
+  }
+  #bloc_dessert {
+    width: 30%;
+  }
+  .bloc_menu_desserts {
+    width: 100%;
+  }
+  #bloc_dessert2 {
+    width: 30%;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    align-content: stretch;
+  }
+  .desserts {
+    max-width: 300px;
+  }
+  .prix {
+    left: 240px;
+  }
+  .commande_button {
+    width: 15%;
+  }
+  .search_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 30px 30px 30px;
+    border: 2px solid #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 50px;
+    position: relative;
+    z-index: 0;
+    height: 50px;
+    margin: 15px auto;
+    background-color: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(#9356dc),
+      to(#ff79da)
+    );
+    background: -o-linear-gradient(bottom, #9356dc, #ff79da);
+    background: linear-gradient(to top, #9356dc, #ff79da);
+    color: #fff;
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+  }
+}

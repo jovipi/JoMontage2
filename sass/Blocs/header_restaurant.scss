@@ -1,0 +1,158 @@
+/*Logo*/
+#logo_page_menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 80px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+#logo_page_menu_2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 80px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+#logo_page_menu img {
+  width: 85%;
+  height: 100%;
+  object-fit: contain;
+}
+#logo_page_menu_2 img {
+  max-width: 65%;
+  max-height: 50%;
+  object-fit: contain;
+}
+.icone_fleche {
+  position: absolute;
+  left: 30px;
+  top: 25px;
+  padding: 0px 0px 0px 0px;
+  color: black;
+  display: flex;
+}
+
+.header_main {
+  @include flex_header_main;
+  padding: 20px 0px 0px 0px;
+}
+.image_header {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  position: relative;
+}
+.image_header_2 {
+  display: block;
+  width: 100%;
+  height: 365px;
+  font-weight: bold;
+  position: relative;
+}
+.image_header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image_header_2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.fleche_gauche {
+  padding: 10px;
+}
+.bloc_titre {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0px 30px 15px;
+}
+
+i.far.fa-heart.icone_heart {
+  opacity: 0.5;
+  right: 25px;
+  bottom: 25px;
+  padding: 4px 0px 0px 20px;
+  font-size: 1.5em;
+}
+.icones {
+  position: relative;
+}
+
+i.fas.fa-heart.icone_heart {
+  padding: 1px 0px 0px 0px;
+  font-size: 1.5em;
+  background: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  position: absolute;
+  right: 25px;
+  top: 30px;
+  right: 0px;
+  top: 3px;
+}
+
+.titre_page_menu {
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6em;
+  font-weight: bold;
+  flex-direction: row;
+  align-content: stretch;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+/*--------------------------------------------------------------------------------------------------------
+                                    Media queries
+----------------------------------------------------------------------------------------------------------*/
+/* Pour mini tablettes*/
+@media screen and (min-width: 357px) and (max-width: 412px) {
+}
+@media screen and (min-width: 413px) and (max-width: 730px) {
+  #logo_page_menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 80px;
+    font-weight: bold;
+    padding-top: 20px;
+  }
+  #logo_page_menu_2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 80px;
+    font-weight: bold;
+    padding-top: 20px;
+  }
+  #logo_page_menu img {
+    width: 80%;
+  }
+  .image_header {
+    height: 280px;
+  }
+}
+@media screen and (min-width: 515px) and (max-width: 1950px) {
+  .image_header {
+    height: 280px;
+  }
+
+  .prix {
+    left: 200px;
+  }
+}

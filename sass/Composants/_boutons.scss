@@ -1,0 +1,55 @@
+@import "../Util/_variables.scss";
+
+.formulaire_boutons {
+  display: flex;
+  width: 100%;
+  padding: 3px 2px 5px 0px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: stretch;
+  justify-content: center;
+}
+.position_button {
+  width: 100%;
+  height: 45px;
+  border: 1px solid $placeholder;
+  background: $placeholder;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  padding: 10px 0px 0px 60px;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+#search {
+  border: 3px solid $placeholder;
+  padding: 0px 0px 0px 15px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background: $placeholder;
+  color: black;
+}
+
+.button_explore {
+  padding: 20px 20px 50px 20px;
+  border: 2px solid #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 50px;
+  position: relative;
+  text-align: center;
+  z-index: 0;
+  height: 15px;
+  background-color: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#9356dc),
+    to(#ff79da)
+  );
+  background: -o-linear-gradient(bottom, #9356dc, #ff79da);
+  background: linear-gradient(to top, #9356dc, #ff79da);
+}
